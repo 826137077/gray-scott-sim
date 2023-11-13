@@ -13,12 +13,13 @@ jobs:
    steps:
     - uses: actions/checkout@v3
     - name: Compile exe file
-      run: cd /home/runner/work/gray-scott-sim/yxy_test/build_dir
+      working-directory: gray-scott-sim/yxy_test/build_dir
+      run: cmake ..
     - name: Compile exe file
-      run: cmake /home/runner/work/gray-scott-sim/yxy_test
-    - name: Compile exe file
+      working-directory: gray-scott-sim/yxy_test/build_dir
       run: make
     - name: Compile exe file
+      working-directory: gray-scott-sim/yxy_test/build_dir
       run: ./gs_test
            
            
