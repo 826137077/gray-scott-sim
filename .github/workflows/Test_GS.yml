@@ -1,0 +1,17 @@
+name: Test GS
+
+on:
+ push:
+ branches: [ "main" ]
+ #pull_request:
+ #branches: [ "main" ]
+
+# ...continued
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   strategy:
+     fail-fast: false
+     matrix:
+     python-version: ["3.11"]
+# continued...
