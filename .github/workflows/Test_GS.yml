@@ -12,7 +12,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
        - name: Compile exe file
-         run: cd yxy_test/build_dir
+         run: cd ./yxy_test/build_dir
        - name: Compile exe file
          run: cmake ..
        - name: Compile exe file
