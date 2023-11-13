@@ -13,9 +13,9 @@ jobs:
    steps:
     - uses: actions/checkout@v3
     - name: Compile exe file
-      run: cd ./yxy_test/build_dir
+      run: cd /home/runner/work/gray-scott-sim/yxy_test/build_dir
     - name: Compile exe file
-      run: cmake ..
+      run: cmake /home/runner/work/gray-scott-sim/yxy_test
     - name: Compile exe file
       run: make
     - name: Compile exe file
