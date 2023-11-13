@@ -5,7 +5,6 @@
 #include <fstream>
 #include <sstream>
 #include <cmath>
-#include "gs.h"
 
 // Define simulation parameters
 const int width = 256;                // Width of the grid

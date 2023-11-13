@@ -58,16 +58,12 @@ void test_uvequalszero() {
 	//getchar();
 }
 
-void test_pause() {
-	getchar();
-}
 
 // 主测试函数
 TEST_LIST = {
     { "test_typeofFK", test_typeofFK },
 	{ "test_sizeofuv", test_sizeofuv },
 	{ "test_uvequalszero", test_uvequalszero},
-	{ "test_pause", test_pause},
     { NULL, NULL }  
 };
 
