@@ -22,6 +22,7 @@ const int outputInterval =  100;      // Output every 1000 iterations
 std::vector<std::vector<double>> u(width, std::vector<double>(height, 1.0));
 std::vector<std::vector<double>> v(width, std::vector<double>(height, 0.0));
 
+
 // initialization function
 void init() {
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
