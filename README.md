@@ -5,6 +5,10 @@
 
 This project implements the simulation of the Gray-Scott model, a mathematical model used to simulate the reaction and diffusion processes of two chemical substances.
 
+
+
+## Test Module
+
 #### Choose the Acutest Framework（https://github.com/mity/acutest）
 
 - Unit tests in C or C++ are supported.
@@ -30,7 +34,8 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
   3. Result Calculation
 
      Calculates the number of elements in the *v* array that exceed a specified threshold.
-  
+
+     
 
 ## Installation Guide
 
@@ -39,6 +44,8 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 - C++ compiler (such as GCC or Clang)
 - CMake
 - Git (optional, for version control)
+
+
 
 
 ## Build and Run
@@ -52,7 +59,7 @@ git clone [repository url]
 cd gray-scott-sim
 ```
 
-2. Build a Project with CMake 
+2. Build a project with CMake 
 
 ```bash
 mkdir build
@@ -66,6 +73,8 @@ make
 ```bash
 ./gs_test
 ```
+
+
 
 ## Continuous Integration
 
@@ -99,4 +108,3 @@ Ubuntu latest version.
 *Yuqi Zhang ([mcpj88@durham.ac.uk]())*
 
 *Xingyu Yan  ([dzbk34@durham.ac.uk]())*
-
