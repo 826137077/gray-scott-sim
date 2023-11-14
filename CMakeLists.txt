@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project information
-project (gray scott sim)
+project (gray_scott_sim)
 
 # Specifying the compiler
 set(CMAKE_CXX_STANDARD 11)
