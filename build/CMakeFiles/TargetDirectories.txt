@@ -1,3 +1,0 @@
-D:/MISCADA/PS/gray-scott-sim/build/CMakeFiles/gs_test.dir
-D:/MISCADA/PS/gray-scott-sim/build/CMakeFiles/edit_cache.dir
-D:/MISCADA/PS/gray-scott-sim/build/CMakeFiles/rebuild_cache.dir
