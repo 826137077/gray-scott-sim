@@ -2,14 +2,9 @@ name: CMake Build and Test
 
 on:
   push:
-<<<<<<< HEAD
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
-=======
-    branches:
-      - main
->>>>>>> d86713f5901a0ecb93899b404fb6dbe1ee6ca082
+    branches: main
+  #pull_request:
+    #branches: main
 
 jobs:
   build:
