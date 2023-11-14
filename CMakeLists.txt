@@ -4,5 +4,10 @@ cmake_minimum_required(VERSION 3.10)
 # Project information
 project (test_gs)
 
+# Specifying the compiler
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+
 # Specify the generation target
 add_executable(gs_test gs_test.cpp acutest.h)
