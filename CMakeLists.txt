@@ -1,8 +1,13 @@
-# CMake 最低版本号要求
-cmake_minimum_required (VERSION 2.8)
+# CMake Minimum Version Number Requirements
+cmake_minimum_required(VERSION 3.10)
 
-# 项目信息
+# Project information
 project (test_gs)
 
-# 指定生成目标
+# Specifying the compiler
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+
+# Specify the generation target
 add_executable(gs_test gs_test.cpp acutest.h)
