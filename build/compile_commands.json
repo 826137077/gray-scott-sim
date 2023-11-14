@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/MISCADA/PS/gray-scott-sim/build",
+  "command": "\"D:\\Program Files\\mingw\\mingw64\\bin\\g++.exe\"   -g -std=gnu++11 -o CMakeFiles\\gs_test.dir\\gs_test.cpp.obj -c D:\\MISCADA\\PS\\gray-scott-sim\\gs_test.cpp",
+  "file": "D:/MISCADA/PS/gray-scott-sim/gs_test.cpp",
+  "output": "CMakeFiles/gs_test.dir/gs_test.cpp.obj"
+}
+]
