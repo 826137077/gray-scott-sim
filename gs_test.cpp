@@ -69,7 +69,7 @@ void test_init() {
         }
     }
 }
-
+//Check if the values of u and v remain unchanged on the boundary
 void test_boundary_conditions() {
     init(); 
 
