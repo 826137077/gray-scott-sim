@@ -69,11 +69,11 @@ Ubuntu latest version.
 
 ##### Steps:
 
-0. **Scan Code:** Use CodeQL to identify vulnerabilities and errors in the code.
-1. **Checkout Code:** Fetch the code from the GitHub repository.
-2. **Install CMake:** Install CMake in the runtime environment.
-3. **Build Project:** Create a build directory, configure, and build the project using CMake.
-4. **Run Tests:** Execute the test program in the build directory.
+1. **Scan Code:** Use CodeQL to identify vulnerabilities and errors in the code.
+2. **Checkout Code:** Fetch the code from the GitHub repository.
+3. **Install CMake:** Install CMake in the runtime environment.
+4. **Build Project:** Create a build directory, configure, and build the project using CMake.
+5. **Run Tests:** Execute the test program in the build directory.
 
 
 
