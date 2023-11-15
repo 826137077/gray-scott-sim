@@ -60,6 +60,30 @@ void test_init() {
     }
 }
 
+void test_boundary_conditions() {
+    init(); 
+
+    auto initialU = u;
+    auto initialV = v;
+
+    simulateStep(); 
+
+    for (int i = 0; i < width; ++i) {
+        TEST_CHECK(u[i][0] == initialU[i][0]);
+        TEST_CHECK(u[i][height-1] == initialU[i][height-1]);
+        TEST_CHECK(v[i][0] == initialV[i][0]);
+        TEST_CHECK(v[i][height-1] == initialV[i][height-1]);
+    }
+
+    for (int j = 0; j < height; ++j) {
+        TEST_CHECK(u[0][j] == initialU[0][j]);
+        TEST_CHECK(u[width-1][j] == initialU[width-1][j]);
+        TEST_CHECK(v[0][j] == initialV[0][j]);
+        TEST_CHECK(v[width-1][j] == initialV[width-1][j]);
+    }
+}
+
+
 void test_writeVTKFile(){
     // up to the tester, wo just set 10 for one VTKfile
     int testIteration = 10;
@@ -120,36 +144,14 @@ void test_countElementsAboveThreshold(){
 
 }
 
-void test_boundary_conditions() {
-    init(); 
-
-    auto initialU = u;
-    auto initialV = v;
-
-    simulateStep(); 
-
-    for (int i = 0; i < width; ++i) {
-        TEST_CHECK(u[i][0] == initialU[i][0]);
-        TEST_CHECK(u[i][height-1] == initialU[i][height-1]);
-        TEST_CHECK(v[i][0] == initialV[i][0]);
-        TEST_CHECK(v[i][height-1] == initialV[i][height-1]);
-    }
-
-    for (int j = 0; j < height; ++j) {
-        TEST_CHECK(u[0][j] == initialU[0][j]);
-        TEST_CHECK(u[width-1][j] == initialU[width-1][j]);
-        TEST_CHECK(v[0][j] == initialV[0][j]);
-        TEST_CHECK(v[width-1][j] == initialV[width-1][j]);
-    }
-}
 
 TEST_LIST = {
     {"test_type", test_type},
     {"test_size", test_same_size },
     {"test_uvequalszero", test_uvequalszero },
     {"test_init", test_init },
-    {"test_writeVTKFile",test_writeVTKFile },
-    {"test_countElementsAboveThreshold",test_countElementsAboveThreshold },
     {"test_boundary", test_boundary_conditions },
+    {"test_writeVTKFile",test_writeVTKFile },
+    {"test_countElementsAboveThreshold",test_countElementsAboveThreshold },    
     { NULL, NULL } 
 };
