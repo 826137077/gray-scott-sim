@@ -1,4 +1,4 @@
-# Gray-Scott model Simulation
+# Gray-Scott model simulation
 
 
 ## Project Introduction
@@ -9,33 +9,21 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 
 ## Test Module
 
-#### Choose the Acutest Framework（https://github.com/mity/acutest）
+##### Choose the Acutest Framework（https://github.com/mity/acutest）
 
 - Unit tests in C or C++ are supported.
 - Acutest is just a single header file.
 - Minimal dependencies Core features only depend on few standard C headers.
 
-#### Implement these three tests
+##### Implement three tests
 
-- Check that the type of the model parameters (*F* , *k*) matches that of the element type of the *u* and *v* vectors.
+- [x] Test A : Check that the type of the model parameters (*F* , *k*) matches that of the element type of the *u* and *v* vectors.
 
-- Check that the variables *u* and *v* are the same size.
+- [x] Test B : Check that the variables *u* and *v* are the same size.
 
-- Check that the simulation produces the mathematically correct answer when *u* = 0 and *v* = 0.
+- [x] Test C : Check that the simulation produces the mathematically correct answer when *u* = 0 and *v* = 0.
 
-  1. Initialization of Simulation Variables
-
-     Iterates through arrays u and v, setting all elements to 0.0.
-
-  2. Main Simulation Loop
-
-     Performs iterations of the simulation.
-
-  3. Result Calculation
-
-     Calculates the number of elements in the *v* array that exceed a specified threshold.
-
-     
+  
 
 ## Installation Guide
 
@@ -52,12 +40,7 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 
 #### Building a project using CMake simplifies the build process and ensures consistency across platforms and environments. Follow the steps below:
 
-1. Clone the repository ( if using Git )
-
-```bash
-git clone [repository url]
-cd gray-scott-sim
-```
+1. Clone the repository ( `git clone [repository url]` )
 
 2. Build a project with CMake 
 
@@ -68,11 +51,7 @@ cmake ..
 make 
 ```
 
-3. Run simulation
-
-```bash
-./gs_test
-```
+3. Run simulation (`./gs_test`)
 
 
 
@@ -89,11 +68,24 @@ On each push to the main branch.
 Ubuntu latest version.
 
 ##### Steps:
+
 0. **Scan Code:** Use CodeQL to identify vulnerabilities and errors in the code.
 1. **Checkout Code:** Fetch the code from the GitHub repository.
 2. **Install CMake:** Install CMake in the runtime environment.
 3. **Build Project:** Create a build directory, configure, and build the project using CMake.
 4. **Run Tests:** Execute the test program in the build directory.
+
+
+
+## Contribution Guidelines
+
+We welcome and encourage community contributions. If you wish to contribute code or documentation to the project, please follow these steps:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 
 
@@ -108,3 +100,9 @@ Ubuntu latest version.
 *Yuqi Zhang ([mcpj88@durham.ac.uk]())*
 
 *Xingyu Yan  ([dzbk34@durham.ac.uk]())*
+
+
+
+## Conclusion
+
+Thank you for your interest and support in the Gray-Scott model simulation project. We look forward to your feedback and contributions, pushing forward this interesting and valuable field of research.
