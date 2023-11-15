@@ -22,27 +22,37 @@ void test_same_size() {
 
 //Check that the simulation produces the mathematically correct answer when u = 0 and v = 0.
 void test_uvequalszero() {
-	
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));    
+    // Simulation initiated to zero
     for (int x = 0; x < width; ++x) {
         for (int y = 0; y < height; ++y) {
             u[x][y] = 0.0;
             v[x][y] = 0.0;
         }
     }
-    std::cout << "Simulation initiated to zero." << std::endl;
 
     // Main simulation loop
     for (int iteration = 0; iteration < numIterations; ++iteration) {
         simulateStep();
     }
 
+    // Verify that v remains 0
+    for (int x = 0; x < width; ++x) {
+        for (int y = 0; y < height; ++y) {
+            TEST_CHECK(v[x][y] == 0.0);
+        }
+    }
+
+    // Verify that u is increased
+    for (int x = 0; x < width; ++x) {
+        for (int y = 0; y < height; ++y) {
+            TEST_CHECK(u[x][y] >= 0.0);
+        }
+    }
+
     // count the amount of pixels above threshold at end.
     double n = countElementsAboveThreshold(threshold);
-
-    std::cout << "Simulation completed: P(v > threshold) = " << n << std::endl;
     TEST_CHECK(n == 0.0);
-    TEST_MSG("Produced n: %f", n);
+    TEST_MSG("Produced n: %f", n);		
 }
 
 void test_init() {
