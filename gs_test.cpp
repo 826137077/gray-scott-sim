@@ -144,6 +144,45 @@ void test_countElementsAboveThreshold(){
 
 }
 
+void test_simulateStep(){
+	//backup original u and v
+	std::vector<std::vector<double>> originalU = u;
+    std::vector<std::vector<double>> originalV = v;
+	
+	//changed u and v to fixed cases
+	for (int x = 0; x < width; ++x) {
+        for (int y = 0; y < height; ++y) {
+            u[x][y] = 0.5;
+            v[x][y] = 0.5;
+        }
+    }
+	
+	//call function to be tested
+	simulateStep();
+
+	//check the results 
+	for (int x = 0; x < width; ++x) {
+        for (int y = 0; y < height; ++y) {
+			if (x == 0 || x == width - 1 || y == 0 || y == height - 1){
+				TEST_CHECK(u[x][y] == 0.5);
+				TEST_MSG("Test fail in u[%d][%d]: produced: %f, expected: 0.5", x, y, u[x][y]);
+				TEST_CHECK(v[x][y] == 0.5);
+				TEST_MSG("Test fail in v[%d][%d]: produced: %f, expected: 0.5", x, y, v[x][y]);
+			}
+			else{
+				TEST_CHECK(u[x][y] == 0.4934);
+				TEST_MSG("Test fail in u[%d][%d]: produced: %f, expected: 0.4934", x, y, u[x][y]);
+				TEST_CHECK(v[x][y] == 0.504656);
+				TEST_MSG("Test fail in v[%d][%d]: produced: %f, expected: 0.504656", x, y, v[x][y]);
+			}
+        }
+    }
+	
+	//change u and v to original data
+	u = originalU;
+    v = originalV;
+}
+
 
 TEST_LIST = {
     {"test_type", test_type},
@@ -152,6 +191,7 @@ TEST_LIST = {
     {"test_init", test_init },
     {"test_boundary", test_boundary_conditions },
     {"test_writeVTKFile",test_writeVTKFile },
-    {"test_countElementsAboveThreshold",test_countElementsAboveThreshold },    
+    {"test_countElementsAboveThreshold",test_countElementsAboveThreshold },  
+    {"test_simulateStep", test_simulateStep },	
     { NULL, NULL } 
 };
