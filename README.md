@@ -24,7 +24,7 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 - [x] Test C : Check that the simulation produces the mathematically correct answer when *u* = 0 and *v* = 0.
 
 - [x] Test D : Check that the function `init()` is correct .
-      
+
 - [x] Test E : Check if the values of *u* and *v* remain unchanged on the boundary.
 
 - [x] Test F : Check that the function `writeVTKFile(int iteration)` is correct .
@@ -62,7 +62,7 @@ make
 ```
 
 3. Run simulation (`./gs_test`)
-
+4. Add  test (`ctest [- R/E/J..]`)
 
 
 ## Continuous Integration
