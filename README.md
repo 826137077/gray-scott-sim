@@ -9,13 +9,13 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 
 ## Test Module
 
-##### Choose the Acutest Framework（https://github.com/mity/acutest）
+#### Choose the Acutest Framework（https://github.com/mity/acutest）
 
 - Unit tests in C or C++ are supported.
 - Acutest is just a single header file.
 - Minimal dependencies Core features only depend on few standard C headers.
 
-##### Implement three tests
+#### Implement three tests
 
 - [x] Test A : Check that the type of the model parameters (*F* , *k*) matches that of the element type of the *u* and *v* vectors.
 
