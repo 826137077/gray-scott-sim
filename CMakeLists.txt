@@ -11,3 +11,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Specify the generation target
 add_executable(gs_test gs_test.cpp acutest.h)
+
+# Enabling Testing
+enable_testing()
+
+# Add Test
+add_test(NAME GS_Test COMMAND gs_test)
