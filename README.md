@@ -78,7 +78,7 @@ make
 
 ## Continuous Integration
 
-#### This project utilizes GitHub Actions for automated workflows to build and test the code. Below is a detailed description of the workflow configuration:
+#### This project utilizes GitHub Actions for automated workflows to scan, build and test the code. Below is a detailed description of the workflow configuration:
 
 ##### Trigger
 
@@ -89,7 +89,7 @@ On each push to the main branch.
 Ubuntu latest version.
 
 ##### Steps:
-
+0. **Scan Code:** Use CodeQL to identify vulnerabilities and errors in the code.
 1. **Checkout Code:** Fetch the code from the GitHub repository.
 2. **Install CMake:** Install CMake in the runtime environment.
 3. **Build Project:** Create a build directory, configure, and build the project using CMake.
