@@ -9,19 +9,27 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 
 ## Test Module
 
-#### Acutest Framework（https://github.com/mity/acutest）
+##### Choose the Acutest Framework（https://github.com/mity/acutest）
 
 - Unit tests in C or C++ are supported.
 - Acutest is just a single header file.
 - Minimal dependencies Core features only depend on few standard C headers.
 
-#### Implement three tests
+##### Tests implemented
 
 - [x] Test A : Check that the type of the model parameters (*F* , *k*) matches that of the element type of the *u* and *v* vectors.
 
 - [x] Test B : Check that the variables *u* and *v* are the same size.
 
 - [x] Test C : Check that the simulation produces the mathematically correct answer when *u* = 0 and *v* = 0.
+
+- [x] Test D : Check that the function `init()` is correct .
+
+- [x] Test E : Check that the function `writeVTKFile(int iteration)` is correct .
+
+- [x] Test F : Check that the function `simulateStep()` is correct .
+
+- [x] Test G : Check that the function `countElementsAboveThreshold(double threshold)` is correct .
 
   
 
@@ -69,11 +77,11 @@ Ubuntu latest version.
 
 ##### Steps:
 
-1. **Scan Code:** Use CodeQL to identify vulnerabilities and errors in the code.
-2. **Checkout Code:** Fetch the code from the GitHub repository.
-3. **Install CMake:** Install CMake in the runtime environment.
-4. **Build Project:** Create a build directory, configure, and build the project using CMake.
-5. **Run Tests:** Execute the test program in the build directory.
+0. **Scan Code:** Use CodeQL to identify vulnerabilities and errors in the code.
+1. **Checkout Code:** Fetch the code from the GitHub repository.
+2. **Install CMake:** Install CMake in the runtime environment.
+3. **Build Project:** Create a build directory, configure, and build the project using CMake.
+4. **Run Tests:** Execute the test program in the build directory.
 
 
 
