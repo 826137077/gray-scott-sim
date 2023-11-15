@@ -9,7 +9,7 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 
 ## Test Module
 
-#### Choose the Acutest Framework（https://github.com/mity/acutest）
+#### Acutest Framework（https://github.com/mity/acutest）
 
 - Unit tests in C or C++ are supported.
 - Acutest is just a single header file.
