@@ -66,10 +66,10 @@ make
 ```bash
 # Basic test
 ./gs_test test_type test_size test_uvequalszero
-# All test
+# List all test
 ./gs_test --list
 # Additional test
-./gs_test test_init test_boundary
+./gs_test test_init test_boundary test_writeVTKFile
 ```
 
 4. Add  test (`ctest [- R/E/J..]`)
