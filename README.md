@@ -61,7 +61,17 @@ cmake ..
 make 
 ```
 
-3. Run simulation (`./gs_test`)
+3. Run simulation
+
+```bash
+# Basic test
+./gs_test test_type test_size test_uvequalszero
+# All test
+./gs_test --list
+# Additional test
+./gs_test test_init test_boundary
+```
+
 4. Add  test (`ctest [- R/E/J..]`)
 
 
