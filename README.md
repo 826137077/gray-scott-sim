@@ -25,7 +25,7 @@ This project implements the simulation of the Gray-Scott model, a mathematical m
 
 - [x] Test D : Check that the function `init()` is correct .
       
-- [x] Test E :Check if the values of *u* and *v* remain unchanged on the boundary.
+- [x] Test E : Check if the values of *u* and *v* remain unchanged on the boundary.
 
 - [x] Test F : Check that the function `writeVTKFile(int iteration)` is correct .
 
