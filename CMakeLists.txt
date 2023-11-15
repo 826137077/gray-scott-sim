@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 
 # Project information
 project (gray_scott_sim)
+message(STATUS "Configuring Project: ${PROJECT_NAME}")
+message(WARNING "This is a custom warning: Make sure to check dependencies.")
 
 # Specifying the compiler
 set(CMAKE_CXX_STANDARD 11)
