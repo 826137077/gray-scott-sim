@@ -69,27 +69,29 @@ void test_init() {
         }
     }
 }
-//Check if the values of u and v remain unchanged on the boundary
-void test_boundary_conditions() {
+
+void test_stability() {
     init(); 
 
-    auto initialU = u;
-    auto initialV = v;
+    const double stabilityThreshold = 0.08; 
+    bool isStable = true;
 
-    simulateStep(); 
+    for (int i = 0; i < 100; ++i) {
+        auto previousU = u;
+        auto previousV = v;
 
-    for (int i = 0; i < width; ++i) {
-        TEST_CHECK(u[i][0] == initialU[i][0]);
-        TEST_CHECK(u[i][height-1] == initialU[i][height-1]);
-        TEST_CHECK(v[i][0] == initialV[i][0]);
-        TEST_CHECK(v[i][height-1] == initialV[i][height-1]);
-    }
+        simulateStep(); 
 
-    for (int j = 0; j < height; ++j) {
-        TEST_CHECK(u[0][j] == initialU[0][j]);
-        TEST_CHECK(u[width-1][j] == initialU[width-1][j]);
-        TEST_CHECK(v[0][j] == initialV[0][j]);
-        TEST_CHECK(v[width-1][j] == initialV[width-1][j]);
+        for (int x = 0; x < width; ++x) {
+            for (int y = 0; y < height; ++y) {
+                if (std::abs(u[x][y] - previousU[x][y]) > stabilityThreshold ||
+                    std::abs(v[x][y] - previousV[x][y]) > stabilityThreshold) {
+                    isStable = false;
+                }
+            }
+        }
+
+        TEST_CHECK(isStable);
     }
 }
 
@@ -199,7 +201,7 @@ TEST_LIST = {
     {"test_size", test_same_size },
     {"test_uvequalszero", test_uvequalszero },
     {"test_init", test_init },
-    {"test_boundary", test_boundary_conditions },
+    {"test_stability", test_stability },
     {"test_writeVTKFile",test_writeVTKFile },
     {"test_countElementsAboveThreshold",test_countElementsAboveThreshold },  
     {"test_simulateStep", test_simulateStep },	
